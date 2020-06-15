@@ -1,14 +1,4 @@
 console.log('it works');
-/*
-let listOfAction = Number(prompt('Choose (1) for listing all the entries.'));
-
-let journalTitle = prompt("Enter your journal title here please: ");
-
-let entryContent = prompt("Enter your entry content here please: ");
-
-let totalLetters = `${firstBlogLetter} '\n' ${secondBlogLetter} '\n ${lastBlogLetter}'`;
-console.log(totalLetters);
-*/
 
 let firstBlogLetter = ["Today is a very wonderful day that everyone can do whatever they want and do not be afraid of anything else. God will bless you!"];
 let secondBlogLetter = ["You can defend the ugly marvelous evil and face the unique life with Jesus. God always blesses you!"];
