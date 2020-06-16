@@ -17,33 +17,51 @@ const journal = [
 
 let myEntry = 1;
 
- for (let i = 0; i < journal.length; i++) {
-  const listEntry = Number(prompt('Choose (1) for listing all the entries. \n Choose (2) for adding a new entry. \n Choose (3) to quit.'));
+let listEntry = Number(prompt(` Welcome to my journal so ENJOY!
+
+Choose (1) for listing all the entries.
+Choose (2) for adding a new entry.
+Choose (3) to quit.
+Choose (4) to delete the last entry.
+Choose (5) to delete the specific entry`));
+
+while (listEntry !== 3) {
+
   if (listEntry === 1) {
     alert(`Title: ${journal[0].title} \n Content: ${journal[0].content}`);
     alert(`Title: ${journal[1].title} \n Content: ${journal[1].content}`);
     alert(`Title: ${journal[2].title} \n Content: ${journal[2].content}`);
   }
 
-    else if (listEntry === 2) {
-      const addEntry = prompt("Enter your new journal title here please: ");
-      const addContent = prompt("Enter your entry content here please: ");
-      alert (`${addEntry} \n ${addContent}`);
-    }
-  };
+  else if (listEntry === 2) {
+    const addEntry = prompt("Enter your new journal title here please: ");
+    const addContent = prompt("Enter your entry content here please: ");
+    alert(` This is our new title: ${addEntry} \n This is our new content: ${addContent}`);
+  }
 
-    if (listEntry === 3) {
+  else if (listEntry === 3) {
     alert('Thank you for having a glimpse at my journal! GOOD BYE! ❤️');
   }
-    if (listEntry === 4) {
-      console.log(journal.pop());
-    }
+  else if (listEntry === 4) {
+    let deleteEntries = journal.pop();
+    alert(` ${deleteEntries.title}`);
+  }
 
-    if (listEntry === 5) {
-      journal.slice(0, 2);
-    }
+  else if (listEntry === 5) {
+    let specificEntry = Number(prompt("give the entry's number that you want to delete"));
+    alert(specificEntry);
+  }
 
   else {
-    const warnMes = Number(prompt("Please! You only can enter number 1 to find the list of the journals, 2 to add some news 3 to quit the journal or 4 to de"));
-    alert (warnMes);
+    let warnMes = Number(prompt("Please! You only can enter number 1 to find the list of the journals, 2 to add some news 3 to quit the journal 4 to delete last of the entry or 5 to delete the specific entry"));
+    alert(warnMes);
   }
+
+  listEntry = Number(prompt(` Welcome to my journal so ENJOY!
+
+Choose (1) for listing all the entries.
+Choose (2) for adding a new entry.
+Choose (3) to quit.
+Choose (4) to delete the last entry.
+Choose (5) to delete the specific entry`));
+};
